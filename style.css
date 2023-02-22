@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: black;
+    /* background-color: chartreuse; */
+    overflow: hidden;
+    font-size: 29px;
+    
+}
+.container{
+    background-image: url(./resources/bg8.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100vw;
+    height: 100vh;
+}
+.dino{
+    background-image: url(./resources/ash.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 52px;
+    padding: 60px;
+}
+.obstacle {
+    background-image: url(./resources/pika.gif);
+    width: 166px;
+    height: 120px;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 44vw;
+    transform: scaleX(-1);
+}
+.dinoAnim{
+    animation: dino 0.6s linear;
+}
+.obstacleAnim{
+    animation: obstacle 5s linear infinite;
+}
+.gameOver{
+    position: relative;
+    top: 63px;
+    font-size: 50px;
+    text-align: center;
+    font-family:'Ubuntu',sans-serif;
+}
+#score{
+    font-size: x-large;
+    color: black;
+    font-weight: bolder;
+    position: absolute;
+    right: 45px;
+    border: 2px solid white;
+    padding: 10px;
+    font-family: 'Ubuntu',sans-serif;
+    border-radius: 20px;
+}
+@keyframes dino {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes obstacle {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+    
+}
